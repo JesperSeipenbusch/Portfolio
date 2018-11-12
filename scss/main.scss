@@ -1,0 +1,270 @@
+@import 'config';
+@import 'menu';
+
+
+*
+{
+    box-sizing: border-box;
+}
+
+body
+{
+    background: #fff;
+    color: #ccc;
+    height: 100%;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    line-height: 1.5;
+    &#bg-img
+    {
+        @include background();
+    }
+    &#bg-color
+    {
+        background: lighten($color: #000000, $amount: 15);
+    }
+}
+
+.vignette 
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    box-shadow: 0 0 1000px rgba(0,0,0,0.7) inset;  
+}
+
+.project-video-wrap
+{
+    min-height: calc(100vh - 20px);
+}
+
+video
+{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -100;
+    transform: translateX(-50%) translateY(-50%);
+    opacity: 0.9;
+
+}
+
+header
+{
+    position: fixed;
+    width: 100%;
+    z-index: 3;
+}
+
+a
+{
+    color: #ccc;
+    text-decoration: none;
+}
+
+main
+{
+    
+    padding: 4rem;
+    min-height: calc(100vh - 20px);
+    z-index: 2;
+
+    .home-content
+    {
+        width: 35%;
+        position: relative;
+    }
+    .about-content
+    {
+        width: 35%;
+        position: relative;
+    }
+    .contact-content
+    {
+        width: 35%;
+        position: relative;
+        margin: auto;
+        align-items: center;
+    }
+
+    
+    &.hide
+    {
+        @include easeOut;
+        opacity: 0;
+        
+    }
+
+
+    .icons
+    {
+        margin-top: 1rem;
+        a
+        {
+            padding: 0.4rem;
+
+            &:hover
+            {
+                color: $primary-color;
+                @include easeOut;
+            }
+        }
+    }
+
+    &#home
+    {
+        overflow: hidden;
+        position: relative;
+        h1
+        {
+            margin-top: 45vh;
+        }
+    }
+
+    &#about
+    {
+        overflow: hidden;
+        position: relative;
+        p
+        {
+            font-size: 14px;
+            font-style: italic;
+            margin-top: 40vh;
+            
+        }
+    }
+}
+
+
+h1,h2,h3
+{
+    margin: 0;
+    font-weight: 400;
+    position: relative;
+
+    &.lg-heading
+    {
+        font-size: 42px;
+        margin-bottom: 12px;
+    }
+
+    &.sm-heading
+    {
+        font-size: 16px;
+        margin-bottom: 2rem;
+    }
+}
+
+.MyButton
+{
+    background: none;
+    color: #ccc;
+    margin-top: 15px;
+    margin-right: 15px;
+    width: 240px;
+    height: 60px;
+    border: 1px solid #ccc;
+    font-size: 22px;
+    letter-spacing: .4px;
+    font-weight: 400;
+    border-radius: 100px;
+    overflow: hidden;
+    @include easeOut;
+
+    &.current
+    {
+        background: #ccc;
+        color: $primary-color;
+    }
+
+    &:hover
+    {
+        cursor: pointer;
+        background: #ccc;
+        color: $primary-color;
+    }    
+}
+
+.about-info
+{
+    overflow-wrap: break-word;   
+}
+
+
+//work/projects
+.work-content
+{
+    display: grid;
+    grid-gap: 3px;
+    margin: auto;
+    margin-top: 5vh;
+    position: relative;
+    vertical-align: middle;
+    .grid-box
+    {
+        background-color: $primary-color;
+        min-height: 250px;
+        min-width: 250px;
+
+        img
+        {
+            width: 100%;
+        }
+
+        .text-wrapper 
+        {
+            width: 100%;
+            position: relative;
+            margin-top: -50%;
+
+            p
+            {
+                font-size: 16px;
+                text-transform: uppercase;
+                text-align: center;
+            }
+        }
+        .hidden
+        {
+            visibility: hidden;
+        }
+
+        &:hover
+            {
+                cursor: pointer;
+                img
+                {
+                    @include easeOut;
+                    opacity: 0.5;
+                }
+                .hidden
+                {
+                    @include easeOut;
+                    visibility: visible;
+                }
+            }
+    }
+}
+
+
+#main-footer
+{
+    position: relative;
+    text-align: center;
+    padding: 2px;
+    background: lighten($primary-color, 5);
+    color: #ccc;
+    height: 20px;
+    overflow: hidden;
+}
+
+
+@import 'mobile';
+
+

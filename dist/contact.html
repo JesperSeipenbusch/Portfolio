@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/main.css">
+
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <title>JESPER SEIPENBUSCH</title>
+</head>
+<body id="bg-color">
+    <header>
+        <div class="menu-btn">
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+            <div class="btn-line"></div>
+        </div>
+
+        <nav class="menu">
+            <ul class="menu-nav">
+                <li class="nav-item">
+                    <input class="MyButton" type="button" value="HOME" onclick="window.location.href='index.html'" />
+                </li>
+                <li class="nav-item">
+                   <input class="MyButton" type="button" value="ABOUT" onclick="window.location.href='about.html'" />
+                </li>
+                <li class="nav-item">
+                       <input class="MyButton" type="button" value="MY WORK" onclick="window.location.href='work.html'" />
+                </li>
+                <li class="nav-item">
+                    <input class="MyButton current" type="button" value="CONTACT" onclick="window.location.href='contact.html'" />
+                </li>    
+            </ul>
+        </nav>
+    </header>
+
+    <main id="contact">
+        <div class="contact-content">
+            <h1 class="lg-heading">
+              Get in touch
+            </h1>
+            
+            <div class="contact-from">
+                <div class="form-group">
+                    <label class="label-control">Name *</label>
+                    <input type="text" name="name" class="form-control"  required>
+                </div>
+                <div class="form-group">
+                    <label class="label-control">Email Adress *</label>
+                    <input type="text" name="eamil" class="form-control"  required>
+                </div>
+                <div class="form-group">
+                    <label class="label-control">Subject *</label>
+                    <input type="text" name="eamil" class="form-control"  required>
+                </div>
+                <div class="form-group">
+                    <label class="label-control">Message *</label>
+                    <textarea name="message" class="form-control" rows="4"  required></textarea>
+                </div>
+                <input type="submit" class=" submit" value="SEND">
+            </div>
+        </div>
+    </main>
+
+    <footer id="main-footer">
+        Copyright &copy; 2018    
+    </footer>
+    
+    <script src="main.js"></script>
+
+</body>
+</html>
